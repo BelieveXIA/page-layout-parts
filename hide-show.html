@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>点击隐藏和显示块</title>
+<style type="text/css">
+.hide{
+	width:200px;
+	height:100px;
+	line-height:100px;
+	text-align:center;
+	background-color: #6ff;
+}
+</style>
+
+<script type="text/javascript">
+window.onload=function()
+{
+ 	var btn=document.getElementById("btn-hide_show");
+ 	var panel=document.getElementById("hide-panel");
+
+ 	btn.onclick=function(){
+  		Show_Hidden(panel);
+  		return false;
+ 	}
+}
+function Show_Hidden(obj){
+ 	if(obj.style.display=="none")
+ 	{
+  		obj.style.display='block';
+ 	}
+ 	else
+ 	{
+  		obj.style.display='none';
+ 	}
+}
+
+</script>
+</head>
+<body>
+	<a href="#" class="touch-btn" id="btn-hide_show">点击显示\隐藏切换</a>
+	<div class="hide" id="hide-panel" style="display:none;">js的奥妙等你探索</div>
+</body>
+</html>
