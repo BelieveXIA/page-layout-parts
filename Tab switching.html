@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+    <meta charset="UTF-8">
+    <title>选项卡切换</title>
+    <style type="text/css">
+	/* CSS样式制作 */  
+	* {
+		margin: 0;
+		padding: 0;
+		font: normal 12px "微软雅黑";
+		color: #000;
+	}/*整体的字体位置样式*/
+	ul {
+		list-style-type: none;
+	}/*取消ul的样式设置*/
+	a {
+		text-decoration: none;
+	}/*取消下划线*/
+	#tab_a {
+		width: 275px;
+		height: 190px;
+		margin: 20px auto;
+	}/*设置主体的大小位置*/
+	#ul1 {
+		border-bottom: 2px solid #8B4513;
+		height: 32px;
+	}/*设置分割线*/
+	#ul1 li {
+		display: inline-block;
+		width: 60px;
+		line-height: 30px;
+		text-align: center;
+		border: 1px solid #999;
+		border-bottom: none;
+		margin-left: 5px;
+	}/*设置块状横排布局，导航框*/
+	#ul1 li:hover {
+		cursor: pointer;
+	}/*鼠标进入li为手形:cursor*/
+	#ul1 li.active {
+		border-top: 2px solid #8B4513;
+		border-bottom: 2px solid #FFF;
+	}
+	/*设置导航栏的上框线与分割线一致，下框线为透明（#fff）*/
+
+	#tab_a div {
+		border: 1px solid #7396B8;
+		border-top: none;
+	}/*设置内容div的样式边框和上框线透明*/
+	#tab_a div li {
+		height: 30px;
+		line-height: 30px;
+		text-indent: 8px;
+	}/*行的高度、行距、文本块中首行文本的缩进*/
+	.show {
+		display: block;
+	}
+	.hide {
+		display: none;
+	}/*仅显示第一个*/
+	</style>
+   
+    <script type="text/javascript">         
+    // JS实现选项卡切换
+    window.onload = function() {
+        var oUl1 = document.getElementById("ul1");
+        var aLi = oUl1.getElementsByTagName("li");
+        var oDiv = document.getElementById("tab_a");
+        var aDiv = oDiv.getElementsByTagName("div");
+        for(var i = 0; i < aLi.length; i++) {
+            aLi[i].index = i;
+            aLi[i].onmouseover = function() {
+                for(var i = 0; i < aLi.length; i++) {
+                    aLi[i].className = "";
+                }
+                this.className = "active";
+                for(var j = 0; j < aDiv.length; j++) {
+                    aDiv[j].className = "hide";
+                }
+                aDiv[this.index].className = "show";
+            }        
+        }
+    }
+    </script>
+    </head>
+    <body>
+<!-- HTML页面布局 -->
+<div id="tab_a">
+	<ul id="ul1">
+		<li class="active">房产:</li>
+		<li>家居:</li>
+		<li>二手房:</li>
+	</ul>
+		<div>
+			<ul>
+				<li>
+					<a href="javascript:;">275万购昌平邻铁三居 总价20万买一居</a>
+				</li>
+				<li>
+					<a href="javascript:;">200万内购五环三居 140万安家东三环</a>
+				</li>
+				<li>
+					<a href="javascript:;">北京首现零首付楼盘 53万购东5环50平</a>
+				</li>
+				<li>
+					<a href="javascript:;">京楼盘直降5000 中信府 公园楼王现房</a>
+				</li>
+			</ul>
+		</div>
+		<div class="hide">
+			<ul>
+				<li >
+					<a href="javasript:;">40平出租屋大改造 美少女的混搭小窝</a>
+				</li>
+				<li >
+					<a href="javasript:;">经典清新简欧爱家 90平老房焕发新生</a>
+				</li>
+				<li >
+					<a href="javasript:;">新中式的酷色温情 66平撞色活泼家居</a>
+				</li>
+				<li >
+					<a href="javasript:;">瓷砖就像选好老婆 卫生间烟道的设计</a>
+				</li>
+			</ul>
+		</div>
+		<div class="hide">
+			<ul>
+				<li>
+					<a href="javascript:;">通州豪华3居260万 二环稀缺2居250w甩</a>
+				</li>
+				<li>
+					<a href="javascript:;">西3环通透2居290万 130万2居限量抢购</a>
+				</li>
+				<li>
+					<a href="javascript:;">黄城根小学学区仅260万 121平70万抛!</a>
+				</li>
+				<li>
+					<a href="javascript:;">独家别墅280万 苏州桥2居优惠价248万</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
