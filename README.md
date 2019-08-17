@@ -1,5 +1,5 @@
 # page-layout
-熟悉各种简单的页面布局和页面组件
+###熟悉各种简单的页面布局和页面组件
 
 biserial-layout.html //双列布局       
 triserial-layout.html //三列布局，主体中间大小随浏览器窗口大小变化     
