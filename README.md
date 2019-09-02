@@ -16,3 +16,8 @@ Telescopic navigation-1.html //水平 伸缩高度的导航栏，html+css
 Telescopic navigation-2.html //水平 伸缩宽度的导航栏，html+css+js      
 Telescopic navigation-3.html //水平 伸缩宽度的导航栏，html+css+jquery      
 
+[Sliding door effect](https://believexia.github.io/JS-study/DOM-study/Sliding%20door%20effect/Sliding%20door%20effect.html)     //这个是一个商品展示的滑动门效果，使用语言js
+
+[Back to the top](https://believexia.github.io/JS-study/Back%20to%20the%20top/Back%20to%20the%20top.html)     //回到顶部效果，适用多屏高度的html网页，语言js
+
+[DomReady](https://github.com/BelieveXIA/JS-study/blob/master/DOM-study/DOM/domReady.js)   //原生js的DomReady
