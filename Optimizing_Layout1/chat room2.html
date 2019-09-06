@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>优化中</title>
+	<style>
+		body,div,p,span,h6{
+			padding: 0;
+			margin: 0;
+		}
+		img{
+			border:0;
+			display: block;
+		}
+		.div1{
+			width: 600px;
+			height: 300px;
+			margin-top:30px;
+		}
+		
+		.div1 img{
+			float: left;
+			padding:0 0 0 30px;
+			overflow: hidden;
+		}
+		.div1 .chat{
+			float: right;
+			position: relative;
+			width: 500px;
+			background-color: #65F9CE;
+			border: #ccc 1px solid;
+			overflow: hidden;
+
+		}
+		.div1 .chat h6{
+			padding-top: 20px;
+			padding-left: 5px;
+		}
+		.div1 .chat p{
+			font-size: 13px;
+			padding: 20px;
+		}
+		.div1 .chat span{
+			position: absolute;
+			font-size: 14px;
+			right: 15px;
+			top:16px;
+		}
+	</style>
+</head>
+<body>
+	<body>
+		<!--减少DOM的层次结构，优化结构和表现-->
+		<div class="div1">
+			<img src="img/16.jpg" alt="" />
+			<div class="chat">
+				<h6>Username</h6>
+				<p>优化一个系统的前端部分，有这么一些事情可以做：1.HTML结构的优化，减少DOM树的层次等等。2.CSS渲染性能的优化，批量写入DOM变更之类。3.资源文件的优化，比如小图片的合并，图像格式的处理，图标字体的使用等。4.JavaScript逻辑的优化，模块化，异步加载，性能优化。5.加载字节量的优化，主要是分摊的策略。6.HTTP请求的优化优化一个系统的前端部分，有这么一些事情可以做：1.HTML结构的优化，减少DOM树的层次等等。2.CSS渲染性能的优化，批量写入DOM变更之类。3.资源文件的优化，比如小图片的合并，图像格式的处理，图标字体的使用等。4.JavaScript逻辑的优化，模块化，异步加载，性能优化。5.加载字节量的优化，主要是分摊的策略。6.HTTP请求的优化</p>
+				<span>10分钟</span>
+			</div>
+		</div>	
+	</body>
+	
+
+</body>
+</html>
