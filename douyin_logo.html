@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>logo</title>
+	<style>
+		.g-container {
+			position: relative;
+			width: 400px;
+			height: 400px;
+			background-color: #000;
+			overflow: hidden;
+			border-radius: 25px;
+			margin: 100px auto;
+			filter: contrast(150%) brightness(110%);
+		}
+		.logo{
+			position: absolute;
+			top: 50px;
+			left: 200px;
+			width: 47px;
+			height: 218px;
+			z-index: 1;
+			background: #24f6f0;
+		}
+		.logo:before {
+			content: "";
+			position: absolute;
+			top: 120px;
+			left: -147px;
+			width: 100px;
+			height: 100px;
+			border: 47px solid #24f6f0;
+			border-top: 47px solid transparent;
+			border-radius: 50%;
+			transform: rotate(45deg);
+		}
+		.logo:after {
+			content: "";
+			position: absolute;
+			top: -110px;
+			right: -183px;
+			width: 140px;
+			height: 140px;
+			border: 40px solid #24f6f0;
+			border-top: 40px solid transparent;
+			border-right: 40px solid transparent;
+			border-left: 40px solid transparent;
+			border-radius: 100%;
+			transform: rotate(45deg);
+			z-index: -10;
+		}
+		.logo:last-child {
+			top: 60px;
+			left: 210px;
+			background-color: #fe2d52;
+			z-index: 10;
+			mix-blend-mode: lighten;
+
+			/*animation: moveLeft 10s infinite;
+*/		}
+		.logo:last-child:before {
+			border: 47px solid #fe2d52;
+			border-top: 47px solid transparent;
+		}
+		.logo:last-child:after {
+			border: 40px solid #fe2d52;
+			border-right: 40px solid transparent;
+			border-top: 40px solid transparent;
+			border-left: 40px solid transparent;
+		}
+
+		/*@keyframes moveLeft {
+			0% {
+				transform: translate(200px);
+			}
+			50% {
+				transform: translate(0px);
+			}
+			100% {
+				transform: translate(0px);
+			}
+		}*/
+	</style>
+	
+</head>
+<body>
+	<div class="g-container">
+		<div class="logo"></div>
+		<div class="logo"></div>	
+	</div>
+</body>
+</html>
